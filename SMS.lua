@@ -2,6 +2,11 @@ local popup = require("plenary.popup")
 
 local Win_id
 
+-- What happens wehen selecting something in menu
+-- local cb = function(_, sel)
+--   vim.cmd("cd " .. sel)
+-- end
+
 function CloseMenu()
   vim.api.nvim_win_close(Win_id, true)
 end
@@ -34,3 +39,5 @@ function SMS(opts, cb)
   local bufnr = vim.api.nvim_win_get_buf(Win_id)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "q", "<cmd>lua CloseMenu()<CR>", { silent=false })
 end
+
+vim.keymap.set("n", "<leader>h", '<cmd>lua SMS()<CR>')
