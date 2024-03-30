@@ -18,7 +18,7 @@ end
 
 function SMS(opts, cb)
   local height = 20
-  local width = 30
+  local width = 70
   local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
   local opts = {}
 
