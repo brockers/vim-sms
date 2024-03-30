@@ -33,7 +33,8 @@ function SMS(opts, cb)
 
   Win_id = popup.create(opts, {
         -- title = "Custom Shortcuts",
-        title = script_path(),
+        -- title = script_path(),
+        title = file,
         -- highlight = "MyProjectWindow",
         line = math.floor(((vim.o.lines - height) / 2) - 1),
         col = math.floor((vim.o.columns - width) / 2),
