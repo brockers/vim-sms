@@ -22,7 +22,7 @@ function SMS(opts, cb)
   local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
   local opts = {}
 
-  local file = io.open("./shortcutlist.md", "r") -- Open the file in read mode
+  local file = io.open("shortcutlist.md", "r") -- Open the file in read mode
 
   print()
   if file then
