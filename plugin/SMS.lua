@@ -1,4 +1,5 @@
 local popup = require("plenary.popup")
+local shortopts = require("shortcutlist")
 
 local Win_id
 
@@ -20,21 +21,20 @@ function SMS(opts, cb)
   local height = 20
   local width = 70
   local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
-  local opts = {}
+  -- local opts = {}
+  --
+  -- local file = io.open("shortcutlist.md", "r") -- Open the file in read mode
 
-  local file = io.open("shortcutlist.md", "r") -- Open the file in read mode
+  -- print()
+  -- if file then
+  --   for line in file:lines() do
+  --     table.insert(opts, line)
+  --   end
+  -- end
 
-  print()
-  if file then
-    for line in file:lines() do
-      table.insert(opts, line)
-    end
-  end
-
-  Win_id = popup.create(opts, {
-        -- title = "Custom Shortcuts",
+  Win_id = popup.create(shortopts, {
+        title = "Custom Shortcuts",
         -- title = script_path(),
-        title = io.popen"cd":read'*l',
         -- highlight = "MyProjectWindow",
         line = math.floor(((vim.o.lines - height) / 2) - 1),
         col = math.floor((vim.o.columns - width) / 2),
