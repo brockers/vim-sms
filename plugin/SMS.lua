@@ -17,7 +17,7 @@ function SMS(opts, cb)
   local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
   local opts = {}
 
-  local file = io.open("/home/bobby/dotfiles/README-VIM.md", "r") -- Open the file in read mode
+  local file = io.open("shortcutlist.md", "r") -- Open the file in read mode
 
   if file then
     for line in file:lines() do
