@@ -1,5 +1,5 @@
 local popup = require("plenary.popup")
-require("vim-sms.shortcutlist")
+require("shortcutlist")
 
 local Win_id
 
