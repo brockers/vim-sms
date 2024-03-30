@@ -1,5 +1,5 @@
 local popup = require("plenary.popup")
-local shortopts = require("shortcutlist")
+require("shortcutlist")
 
 local Win_id
 
@@ -32,7 +32,7 @@ function SMS(opts, cb)
   --   end
   -- end
 
-  Win_id = popup.create(shortopts, {
+  Win_id = popup.create(GetShortcuts(), {
         title = "Custom Shortcuts",
         -- title = script_path(),
         -- highlight = "MyProjectWindow",
