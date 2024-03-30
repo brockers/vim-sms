@@ -17,7 +17,11 @@
 <leader>s        - Show/Hide Whitespace
 <leader>w        - Save File
 K                - show code documentation
+ctrl-b           - scroll full page up
 ctrl-c           - trigger code completion
+ctrl-d           - scroll down
+ctrl-f           - scroll full page down
+ctrl-u           - scroll up
 gcc              - comment line or selected code
 gd               - jump to code definition
 gi               - jump to code implementation
